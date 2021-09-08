@@ -37,10 +37,10 @@ describe('course search', () => {
 	  }
 	  //send request to the app
 	  chai.request(app).get('/course/searchCourse')
-	  	.send(searchParams)
+	  	.query(searchParams)
 		.then((res) => {
 		  expect(res).to.have.status(200);
-		  done();
+		 done();
 		}).catch(err => {
 		  console.log(err.message);
 		})
@@ -54,7 +54,7 @@ describe('course search', () => {
 		}
 		//send request to the app
 		chai.request(app).get('/course/searchCourse')
-			.send(searchParams)
+			.query(searchParams)
 		  .then((res) => {
 			expect(res).to.have.status(200);
 			done();
@@ -71,7 +71,7 @@ describe('course search', () => {
 		}
 		//send request to the app
 		chai.request(app).get('/course/searchCourse')
-			.send(searchParams)
+			.query(searchParams)
 		  .then((res) => {
 			expect(res).to.have.status(422);
 			done();
@@ -88,7 +88,7 @@ describe('course search', () => {
 		}
 		//send request to the app
 		chai.request(app).get('/course/searchCourse')
-			.send(searchParams)
+			.query(searchParams)
 		  .then((res) => {
 			expect(res).to.have.status(422);
 			done();

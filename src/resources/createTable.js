@@ -27,6 +27,22 @@ CREATE TABLE IF NOT EXISTS ${C.mysql.globalAcademy.courses}(
 	FOREIGN KEY (universityId)
 		REFERENCES academy.university(universityId)
 );
+
+INSERT INTO universiniversity (name,country,description,gpa,greScore) VALUES ('LNMIIT','INDIA','DEEMED UNIVERSITY',75,80);
+INSERT INTO university (name,country,description,gpa,greScore) VALUES ('MNIT','INDIA','PUBLIC TECHNICAL UNIVERSITY',85,80);
+INSERT INTO university (name,country,description,gpa,greScore) VALUES ('JECRC','INDIA','GOVERMENT UNIVERSITY',65,70);
+
+INSERT INTO courses (universityId,name,teacherName) VALUES (1,'DATA SCIENCE','BINDU');
+INSERT INTO courses (universityId,name,teacherName) VALUES (1,'COMPUTER SCIENCE','AJEET');
+INSERT INTO courses (universityId,name,teacherName) VALUES (1,'MATHS','RAJ');
+INSERT INTO courses (universityId,name,teacherName) VALUES (1,'ARTSC','VIDYA');
+INSERT INTO courses (universityId,name,teacherName) VALUES (2,'DATA SCIENCE','Neha');
+INSERT INTO courses (universityId,name,teacherName) VALUES (2,'COMPUTER SCIENCE','RAJU')
+INSERT INTO courses (universityId,name,teacherName) VALUES (2,'HISTORY','SANA');
+INSERT INTO courses (universityId,name,teacherName) VALUES (3,'ECONOMICS','TEJAL');
+INSERT INTO courses (universityId,name,teacherName) VALUES (3,'ARTS','SAPNA');
+INSERT INTO courses (universityId,name,teacherName) VALUES (3,'ECO','MAYANK');
+
 `
 mysql
 	.query(query)
